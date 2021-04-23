@@ -1,9 +1,14 @@
-import { main } from '../components/main.js';
-import { log } from './store.js';
+import { log, read } from './store.js';
 
-const app = main();
+import '../listeners/up.js';
+import '../listeners/down.js';
 
-document.getElementById('root').appendChild(app);
+const initialLevel = read('level');
+
+const numberEl = document.getElementById('the-number');
+numberEl.innerHTML = initialLevel;
+numberEl.className =
+  initialLevel <= 3 ? 'low' : initialLevel <= 7 ? 'medium' : 'high';
 
 const logTheLogs = () => log();
 document.getElementById('log-the-logs').onclick = logTheLogs;
