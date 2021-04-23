@@ -1,0 +1,33 @@
+- or do full validation?
+  give schema for quiz
+  how to use it
+    initialize with schema
+
+design decisions
+  API
+    simple explicit function names instead of fancy chaining
+      encourage shallow states
+      intuitive and small
+    must pass key
+      for explicitness
+    array of strings for nested state
+      alternative to chaining
+      simpler logging than building a chainable store
+      more functional
+  to enforce planning state
+    type enforcement
+    key existence enforcement at initiation (if strict === true)
+  error-happy: for strict habiting
+
+
+
+
+api ideas
+  - reading and writing nested state
+  https://github.com/chandlerprall/insula
+  ! https://github.com/marcuswestin/store.js/
+    nested state: array of strings
+  https://github.com/rhyolight/JavaScript-Data-Store
+    get('key.nestedKey')
+  support partial state?
+    probably not

@@ -1,0 +1,12 @@
+{
+  "study": {
+    "trace": {
+      "variables": { "read": false },
+      "functions": true
+    },
+    "eval": true,
+    "save": true,
+    "type": "module",
+    "environment": true
+  }
+}
